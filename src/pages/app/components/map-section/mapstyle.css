@@ -1,0 +1,141 @@
+.pac-container {
+  position: fixed !important;
+  font-family: "Inter", sans-serif;
+  font-size: 40px !important;
+  margin-top: 12px;
+  margin-left: -43px;
+  border-radius: 12px;
+  width: 100% !important;
+  background-color: #020817;
+  color: #fff;
+  max-width: 415px !important;
+  box-shadow: none !important;
+  border: rgba(255, 255, 255, 0.13) 1px solid;
+}
+
+@media (max-width: 768px) {
+  .pac-container {
+    width: 100% !important;
+  }
+}
+@media (max-width: 398px) {
+  .pac-container {
+    width: 90% !important;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 418px) {
+  .pac-container {
+    width: 93% !important;
+    margin-top: 8px;
+    margin-left: -40px;
+  }
+}
+@media (max-width: 431px) {
+  .pac-container {
+    width: 93% !important;
+    margin-top: 8px;
+    margin-left: -40px;
+  }
+}
+
+#search-bar {
+  width: 100%;
+}
+
+.pac-item {
+  margin: 8px 0 8px 0;
+  padding: 6px 18px 6px 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #020817;
+  color: #fff;
+}
+
+.pac-item:hover {
+  background-color: rgba(112, 128, 144, 0.226);
+}
+
+.pac-icon {
+  margin-right: 18px; /* Adjust the margin to create the desired gap */
+}
+
+.pac-item-query {
+  font-weight: 600;
+  color: #fff;
+}
+
+.custom-info-window {
+  position: relative;
+  padding: 0px;
+  width: 324px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+  .custom-info-window {
+    width: 264px !important;
+  }
+}
+
+.custom-info-window.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Custom styles for the recent searches list */
+.recent-search-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.recent-search-icon {
+  width: 20px; /* Set desired width */
+  height: 20px; /* Set desired height */
+  margin-right: 10px;
+}
+/* Street View button theming */
+.gm-svpc {
+  padding: 1.3rem !important;
+  left: -0px !important;
+  top: -6px !important;
+  box-shadow: none !important;
+  background: #202730 !important;
+  color: hsl(var(--foreground)) !important;
+  border: 0.5px solid #343a42 !important;
+  border-radius: 100% !important;
+}
+
+.dark .gm-svpc {
+  background: hsl(var(--opaque)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 0.5px solid #343a42 !important;
+}
+
+.gm-svpc:hover {
+  background: #202730 !important;
+  color: hsl(var(--accent-foreground)) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 640px) {
+  .gm-svpc {
+    display: none !important;
+  }
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/src/assets/font/static/Inter_18pt-Regular.ttf") format("truetype");
+}
+
+/* 
+  AIzaSyBMaIhJ3JUvn4YX4u7sKiB5SXwmSlaGtr4 */

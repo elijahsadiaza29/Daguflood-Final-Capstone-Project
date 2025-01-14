@@ -1,0 +1,7 @@
+@media (max-width: 360px) {
+    .infowindow {
+        left: 2.3rem !important;
+        top: 10rem !important;
+    }
+    
+}

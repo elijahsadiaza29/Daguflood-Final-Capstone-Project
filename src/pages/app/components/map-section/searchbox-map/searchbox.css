@@ -1,0 +1,25 @@
+@media (min-width: 360px) {
+  .search-box-container {
+    width: 100% !important;
+  }
+  #search-box{
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 411px) {
+    .search-box-container {
+      width: 100% !important 
+    }
+    #search-box{
+        width: 100% !important 
+      }
+  }
+
+  @media (width: 360px) {
+    .menu-content{
+        width: 22rem !important;
+        margin-left: .3rem ;
+        margin-right: 0rem 
+    }
+}

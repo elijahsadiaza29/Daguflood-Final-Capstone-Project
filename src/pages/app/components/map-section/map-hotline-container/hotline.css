@@ -1,0 +1,6 @@
+@media (width: 360px) {
+    .hotline{
+        width:340px !important ;
+        margin-left: .5rem /* 16px */;
+    }
+}
