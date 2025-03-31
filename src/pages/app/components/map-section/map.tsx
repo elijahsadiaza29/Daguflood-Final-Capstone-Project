@@ -86,13 +86,16 @@ const MyMap: React.FC = () => {
         if (map) return;
         if (!mapRef.current) return;
 
+        const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
         try {
             const loader = new Loader({
-                apiKey: 'AIzaSyD5vVnzoPuFc0QJbVhxb4u-tJhDJkW2AhM',
+                apiKey: apiKey,
                 version: "weekly",
                 libraries: ["places"],
                 authReferrerPolicy: 'origin',
             });
+
 
             const google = await loader.load();
 

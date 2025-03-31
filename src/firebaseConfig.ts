@@ -1,14 +1,12 @@
-
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { getFirestore } from 'firebase/firestore'; 
+import { getFirestore } from "firebase/firestore";
 import { getMessaging, getToken } from "firebase/messaging";
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyAdMm1Dbd9X6tfdvRPAHPcGE44txQuGtc8",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "dagufloodv2.firebaseapp.com",
-  databaseURL:  
+  databaseURL:
     "https://dagufloodv2-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "dagufloodv2",
   storageBucket: "dagufloodv2.appspot.com",
@@ -18,29 +16,30 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const feedbackDB = getFirestore(app);  
+const feedbackDB = getFirestore(app);
 const database = getDatabase(app);
 const messaging = getMessaging(app);
 
 export const generateToken = async () => {
   try {
     const permission = await Notification.requestPermission();
-    console.log('Notification permission:', permission);
-    
+    console.log("Notification permission:", permission);
+
     if (permission === "granted") {
       const token = await getToken(messaging, {
-        vapidKey: "BOHJMDK5-C88K9RNbi5QMAS9ub8flFwL18UwR6jQ4LG9kMuqyVpWOoR-uDFTkbMTmFw9-1R0FKt1INCHlcCeuHA",
+        vapidKey:
+          "BOHJMDK5-C88K9RNbi5QMAS9ub8flFwL18UwR6jQ4LG9kMuqyVpWOoR-uDFTkbMTmFw9-1R0FKt1INCHlcCeuHA",
       });
-      
+
       if (!token) {
-        throw new Error('Failed to generate FCM token');
+        throw new Error("Failed to generate FCM token");
       }
-      
+
       return token;
     }
     return null;
   } catch (error) {
-    console.error('Error generating token:', error);
+    console.error("Error generating token:", error);
     throw error;
   }
 };

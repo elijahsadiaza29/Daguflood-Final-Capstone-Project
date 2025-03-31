@@ -19,8 +19,8 @@ const StatusControl = () => {
         const checkMobile = () => {
             const mobile = window.innerWidth < 640;
             setIsMobile(mobile);
-            setShowTooltip(mobile);
-            setIsTooltipVisible(mobile);
+            setShowTooltip(true);
+            setIsTooltipVisible(true);
         };
 
         checkMobile();
